@@ -8,15 +8,21 @@
 
 import UIKit
 
-class StartingViewController: UIViewController {
+class StartingViewController: LabelProvidingVC, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var label: UILabel!
+    
+    let animator = Animator()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return animator
     }
 }
 

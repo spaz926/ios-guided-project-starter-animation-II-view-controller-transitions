@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RedViewController: UIViewController {
+class RedViewController: LabelProvidingVC, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var label: UILabel!
     
