@@ -37,14 +37,37 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h21-qW-UUM">
+                                <rect key="frame" x="113.5" y="60" width="148" height="148"/>
+                                <color key="backgroundColor" red="0.85882359743118286" green="0.48235297203063965" blue="0.48235297203063965" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h21-qW-UUM" secondAttribute="height" multiplier="1:1" id="Wa0-8o-wPX"/>
+                                    <constraint firstAttribute="height" constant="148" id="f6c-4a-Gpk"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="h21-qW-UUM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2kJ-jX-vYK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h21-qW-UUM" secondAttribute="bottom" constant="50" id="bmh-Zp-i9l"/>
+                            <constraint firstItem="h21-qW-UUM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="fQE-v5-c86"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bRz-Sh-86E" secondAttribute="trailing" constant="10" id="j9b-UV-zWZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bRz-Sh-86E" secondAttribute="bottom" constant="20" id="oZR-NH-5gR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bmh-Zp-i9l"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="redView" destination="h21-qW-UUM" id="Pco-77-0XA"/>
+                        <outlet property="redViewAspectRatioConstraint" destination="Wa0-8o-wPX" id="oci-Z3-rH3"/>
+                        <outlet property="redViewBottomConstraint" destination="bmh-Zp-i9l" id="ZF3-0O-Auo"/>
+                        <outlet property="redViewHeightConstraint" destination="f6c-4a-Gpk" id="WhM-Dv-g7G"/>
+                        <outlet property="redViewTopConstraint" destination="fQE-v5-c86" id="c7D-9u-hUq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
