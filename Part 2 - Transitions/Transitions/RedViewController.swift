@@ -12,14 +12,21 @@ class RedViewController: LabelProvidingVC, UIViewControllerTransitioningDelegate
     
     @IBOutlet weak var label: UILabel!
     
+    let animator = Animator()
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return animator
     }
     
     @IBAction func pan(_ sender: UIPanGestureRecognizer) {
     }
     
     @IBAction func dismiss(_ sender: Any) {
+        transitioningDelegate = self
         dismiss(animated: true, completion: nil)
     }
 }

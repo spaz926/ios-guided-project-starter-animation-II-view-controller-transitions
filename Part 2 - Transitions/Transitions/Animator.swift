@@ -56,6 +56,7 @@ class Animator: NSObject, UIViewControllerAnimatedTransitioning {
         UIView.animate(withDuration: transitionDuration, animations: {
             let transitioningLabelEndFrame = containerView.convert(toLabel.bounds, from: toLabel)
             transitioningLabel.frame = transitioningLabelEndFrame
+            toView.alpha = 1
         }) { _ in
             toLabel.alpha = 1
             fromLabel.alpha = 1
